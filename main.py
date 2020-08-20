@@ -6,11 +6,11 @@ access_token = "ACCESS_TOKEN"
 uris = []
 
 # SONG FILTERS
-limit = 10
-market = "AU"
+limit = 10  # no. songs in playlist
+market = "AU"  # region
 seed_genres = "rnb"
 target_danceability = 0.2
-seed_artists = '5dCvSnVduaFleCnyy98JMo'
+seed_artists = '5dCvSnVduaFleCnyy98JMo'. # from spotify/artist/<this part>
 
 # QUERY
 query = f'{endpoint_url}limit={limit}&market={market}&seed_genres={seed_genres}&target_danceability={target_danceability}&seed_artists={seed_artists}'
@@ -19,6 +19,7 @@ response = requests.get(query,
     headers={"Content-Type":"application/json",
     "Authorization":f"Bearer {access_token}"})
 
+# OUTPUT
 json_response = response.json()
 for i, j in enumerate(json_response['tracks']):
     uris.append(j['uri'])
