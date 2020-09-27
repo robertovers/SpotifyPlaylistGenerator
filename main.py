@@ -33,8 +33,8 @@ user_id = "USER ID HERE"
 endpoint_url = f"https://api.spotify.com/v1/users/{user_id}/playlists"
 
 request_body = json.dumps({
-          "name": "Auto-Generated Playlist",
-          "description": "\ (•◡•) /",
+          "name": "",
+          "description": "",
           "public": False
         })
 
